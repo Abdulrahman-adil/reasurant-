@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+* {
+  -webkit-scroll-behavior: auto !important;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #0c0c0c;
@@ -32,7 +36,7 @@ body {
 
 h1,
 h2 {
-  font-family: "Dancing Script", cursive;
+  font-family: "Shantell Sans", cursive;
 }
 
 .heading_container {
@@ -73,6 +77,22 @@ a:focus {
 .btn:focus {
   outline: none !important;
   box-shadow: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #ffbe33);
+}
+
+::-webkit-scrollbar-hover {
+  background: rgb(0, 18, 34);
 }
 
 /*header section*/
@@ -125,12 +145,18 @@ a:focus {
 }
 
 .navbar-brand {
-  font-family: "Dancing Script", cursive;
+  font-family: "Shantell Sans", cursive;
 }
 .navbar-brand span {
   font-weight: bold;
   font-size: 32px;
   color: #ffffff;
+  gap: 10px;
+  position: relative;
+}
+.navbar-brand span p {
+  position: absolute;
+  right: -76px;
 }
 
 .custom_nav-container {
@@ -181,14 +207,14 @@ a:focus {
   justify-content: center;
   align-items: center;
 }
-.user_option .cart_link svg {
+.user_option .cart_link .fa-cart-shopping {
   width: 17px;
   height: auto;
-  fill: #ffffff;
+  color: #ffffff;
   margin-bottom: 2px;
 }
-.user_option .cart_link:hover svg {
-  fill: #ffbe33;
+.user_option .cart_link:hover .fa-cart-shopping {
+  color: #ffbe33;
 }
 .user_option .order_online {
   display: inline-block;
@@ -341,12 +367,12 @@ a:focus {
   transition: all 0.2s;
 }
 .offer_section .box .detail-box h5 {
-  font-family: "Dancing Script", cursive;
+  font-family: "Shantell Sans", cursive;
   font-size: 24px;
   margin: 0;
 }
 .offer_section .box .detail-box h6 {
-  font-family: "Dancing Script", cursive;
+  font-family: "Shantell Sans", cursive;
   margin: 10px 0;
 }
 .offer_section .box .detail-box h6 span {
@@ -365,11 +391,11 @@ a:focus {
 .offer_section .box .detail-box a:hover {
   background-color: #e69c00;
 }
-.offer_section .box .detail-box a svg {
+.offer_section .box .detail-box a .fa-cart-shopping {
   width: 20px;
   height: auto;
   margin-left: 5px;
-  fill: #ffffff;
+  color: #ffffff;
 }
 .offer_section .box:hover .img-box img {
   transform: scale(1.1);
@@ -442,10 +468,10 @@ a:focus {
   justify-content: center;
   align-items: center;
 }
-.food_section .box .options a svg {
+.food_section .box .options a .fa-cart-shopping {
   width: 18px;
   height: auto;
-  fill: #ffffff;
+  color: #ffffff;
 }
 .food_section .box:hover .img-box img {
   transform: scale(1.1);
@@ -688,7 +714,7 @@ a:focus {
 .footer_section .footer-logo {
   font-weight: 600;
   margin-bottom: 20px;
-  font-family: "Dancing Script", cursive;
+  font-family: "Shantell Sans", cursive;
 }
 .footer_section p {
   color: #dbdbdb;
@@ -749,4 +775,16 @@ a:focus {
 }
 .footer_section .footer-info p a {
   color: inherit;
+}
+
+#totp {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #ffbe33;
+  padding: 10px;
+  border-radius: 6px;
+  display: none;
+  cursor: pointer;
+  z-index: 222;
 }/*# sourceMappingURL=style.css.map */

@@ -5,7 +5,9 @@ $primary2: #222831;
 $textCol: #1f1f1f;
 
 // import fonts -  font-family: 'Open Sans', sans-serif and  font-family: 'Dancing Script', cursive;
-
+*{
+  -webkit-scroll-behavior: auto !important;
+  }
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap');
 
 @mixin main-font {
@@ -13,7 +15,8 @@ $textCol: #1f1f1f;
 }
 
 @mixin second-font {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Shantell Sans', cursive;
+
 }
 
 @mixin hero_btn($col1, $col2, $pad1, $pad2, $bRadius) {
@@ -114,7 +117,20 @@ a:focus {
   outline: none !important;
   box-shadow: none;
 }
-
+//Custom Scrollbar
+::-webkit-scrollbar{
+	width: 10px;
+  }
+  ::-webkit-scrollbar-track{
+	background-color: #fff;
+  }
+  ::-webkit-scrollbar-thumb{
+	background: linear-gradient(transparent,$primary1)
+  }
+  ::-webkit-scrollbar-hover{
+	background:rgb(0, 18, 34);
+  }
+//Custom Scrollbar
 /*header section*/
 .hero_area {
   position: relative;
@@ -175,6 +191,12 @@ a:focus {
     font-weight: bold;
     font-size: 32px;
     color: $white;
+    gap: 10px;
+    position: relative;
+    p{
+      position: absolute;
+      right: -76px; 
+    }
   }
 }
 
@@ -240,17 +262,17 @@ a:focus {
     justify-content: center;
     align-items: center;
 
-    svg {
+    .fa-cart-shopping {
       width: 17px;
       height: auto;
-      fill: $white;
+      color: $white;
       margin-bottom: 2px;
     }
 
     &:hover {
 
-      svg {
-        fill: $primary1;
+      .fa-cart-shopping {
+        color: $primary1
       }
     }
   }
@@ -442,11 +464,11 @@ a:focus {
       a {
         @include hero_btn($primary1, $white, 10px, 30px, 45px);
 
-        svg {
+        .fa-cart-shopping {
           width: 20px;
           height: auto;
           margin-left: 5px;
-          fill: $white;
+          color: $white;
         }
       }
     }
@@ -546,10 +568,10 @@ a:focus {
         justify-content: center;
         align-items: center;
 
-        svg {
+        .fa-cart-shopping {
           width: 18px;
           height: auto;
-          fill: $white;
+          color: $white;
         }
       }
     }
@@ -908,3 +930,16 @@ a:focus {
 }
 
 // end footer section
+// scroll to top
+#totp{
+	position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: $primary1;
+    padding: 10px;
+    border-radius: 6px;
+	display: none;
+	cursor: pointer;
+	z-index: 222;
+}
+// scroll to top
