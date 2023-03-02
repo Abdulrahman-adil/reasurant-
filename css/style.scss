@@ -137,6 +137,23 @@ a:focus {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: url(../images/bg3.jpg);
+  background-size: cover;
+    background-color: #1f2021;
+    min-height: 100vh;
+    position: relative;
+    // .overlay{
+    //   position: absolute;
+    // background-color: rgba(0, 0, 0, 0.7);
+    // top: 0;
+    // left: 0;
+    // bottom: 0;
+    // right: 0;
+    // height: 100%;
+    // width: 100%;
+    // color: #fff;
+    // z-index: 1;
+    // }
 }
 
 .bg-box {
@@ -150,6 +167,7 @@ a:focus {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
   }
 }
 
@@ -354,6 +372,7 @@ a:focus {
   #customCarousel1 {
     width: 100%;
     position: unset;
+    z-index: 11;
   }
 
   .detail-box {
